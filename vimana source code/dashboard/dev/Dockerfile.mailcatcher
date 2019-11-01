@@ -1,0 +1,5 @@
+FROM ruby
+
+RUN gem install mailcatcher
+
+CMD ["mailcatcher", "--smtp-ip=127.0.0.1", "--http-ip=127.0.0.1", "-f"]

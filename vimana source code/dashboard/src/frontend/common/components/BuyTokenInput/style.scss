@@ -1,0 +1,32 @@
+.wrapper {
+    border: 0.11rem solid #393c41;
+    width: 25rem;
+    height: 5rem;
+    display: flex;
+    padding-left: 2.6rem;
+
+    input {
+        width: calc(100% - 1rem);
+        padding-right: 1rem;
+        text-align: left;
+        font-size: 2rem;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: var(--input-color);
+        &:invalid {
+            box-shadow: none;
+        }
+        &::placeholder {
+            font-size: 2rem;
+            color: var(--input-color);
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            background-color: transparent;
+            transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+        }
+    }
+}

@@ -1,0 +1,191 @@
+.wrapper {
+    width: calc(840 / 1080 * 100%);
+    font-size: 2.2rem;
+    color: var(--grey);
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(35 / 900 * 100vh);
+    label {
+        display: block;
+        width: 35.71%;
+    }
+}
+
+:global .registerSelect {
+    color: var(--input-color);
+    border: 0;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    cursor: pointer;
+    width: 64.29%;
+    border-bottom: 0.11rem solid #393c41;
+    padding-bottom: 1rem;
+
+    .Select {
+        &-control {
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 100%;
+        }
+        &-placeholder {
+            margin: 0.5rem 0;
+        }
+        &-value-icon {
+            margin-right: 0.5rem;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        &-value {
+            color: #fff;
+            margin: 0.5rem 0;
+        }
+        &-arrow-zone {
+            font-size: 1rem;
+            line-height: 1rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotateX(180deg);
+            transition: transform 0.3s;
+            will-change: transform;
+        }
+        &-multi-value-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+        &-input {
+            visibility: hidden;
+        }
+        &-menu-outer {
+            z-index: 5;
+            position: absolute;
+            top: 4rem;
+            background-color: #f0f0f0;
+            left: 0;
+            right: 0;
+            max-height: 45rem;
+            overflow: auto;
+        }
+        &-option {
+            padding: 1rem 2.8rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            &:hover {
+                border-radius: 0;
+                background-color: var(--grey);
+                transition: 0.2s;
+            }
+            &:first-child:hover, &:last-child:hover {
+                border-radius: 0;
+            }
+        }
+    }
+
+    &.is-open {
+        .Select-arrow-zone {
+            transform: rotateX(0);
+        }
+    }
+    &.is-searchable {
+        .Select-value, .Select-placeholder {
+            position: absolute;
+        }
+        .Select-input {
+            width: 100%;
+            visibility: visible;
+            input {
+                text-align: left;
+                font-size: 2rem;
+                outline: none;
+                width: 100% !important;
+                border: none;
+                background-color: transparent;
+                color: var(--input-color);
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+.option {
+    padding: 0 2.8rem;
+    line-height: 3rem;
+    position: relative;
+    color: #000;
+
+    &:hover {
+        color: #fff;
+        background-color: #4598fe;
+    }
+    &:first-child {
+        &:hover {
+            border-top-left-radius: 0.7rem;
+            border-top-right-radius: 0.7rem;
+        }
+    }
+    &:last-child {
+        &:hover {
+            border-bottom-left-radius: 0.7rem;
+            border-bottom-right-radius: 0.7rem;
+        }
+    }
+}
+
+:global .registerWrapperSelect {
+    width: 100%;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    z-index: 2;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+        min-height: 1px;
+        width: 100%;
+        background: transparent;
+        border-bottom: 0.14rem solid #000000;
+    }
+
+    label {
+        display: block;
+        width: 35.71%;
+    }
+
+    .registerSelect {
+        width: 100%;
+        padding: 0 2rem;
+        height: 8.36rem;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.11rem;
+        border-bottom: none;
+        outline: none;
+        animation: slide-out-up 0.4s ease-in-out 0.4s both;
+        animation-delay: 0.4s;
+
+        .Select-value {
+            color: #000;
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.11rem;
+        }
+        .Select-menu-outer {
+            top: 8.4rem;
+            max-height: 35rem;
+            background-color: #ffffff;
+        }
+    }
+}

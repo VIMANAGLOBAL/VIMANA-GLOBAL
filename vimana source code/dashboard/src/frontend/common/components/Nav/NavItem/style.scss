@@ -1,0 +1,21 @@
+.link {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #3f3f3f;
+    transition: 0.3s;
+    margin-bottom: 2.7rem;
+    letter-spacing: calc(200 / 1000 * 1.6rem);
+
+    &:hover,
+    &:active {
+        color: #fff;
+    }
+}
+
+.active {
+    color: #fff;
+}
+
+.disabled {
+    cursor: not-allowed;
+}

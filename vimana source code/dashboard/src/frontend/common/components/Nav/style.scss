@@ -1,0 +1,58 @@
+.nav {
+    background-image: url('../../../../common/assets/bcg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 3.9rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    flex-grow: 1;
+
+    .button {
+        display: block;
+        background-color: var(--theme);
+        max-width: 40rem;
+        height: 6rem;
+        padding: 0 3rem;
+        line-height: 6rem;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: calc(200 / 1000 * 2rem);
+        text-transform: uppercase;
+        transition: 0.3s;
+        border: 0.15rem solid transparent;
+        margin: 2.7rem;
+        &:hover {
+            background-color: transparent;
+            border-color: var(--theme);
+            color: var(--theme);
+        }
+    }
+    .disabledButton {
+        margin-bottom: 2.7rem;
+        pointer-events: none;
+        background-color: transparent;
+        border: 0.15rem solid var(--grey);
+        color: var(--grey);
+        display: block;
+        max-width: 40rem;
+        height: 6rem;
+        padding: 0 3rem;
+        line-height: 6rem;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: calc(200 / 1000 * 2rem);
+        text-transform: uppercase;
+        transition: 0.3s;
+        &:hover {
+            background-color: transparent;
+            border-color: var(--theme);
+            color: var(--theme);
+        }
+    }
+    span:last-child {
+        cursor: not-allowed;
+    }
+}

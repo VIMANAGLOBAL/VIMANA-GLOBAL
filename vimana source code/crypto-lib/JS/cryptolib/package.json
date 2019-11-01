@@ -1,0 +1,66 @@
+{
+  "name": "vimryptojs",
+  "version": "0.0.1",
+  "description": "vimrypto JS library",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run compile",
+    "prestart": "rm -rf lib",
+    "compile": "rm -rf lib && babel src -s --out-dir lib",
+    "start": "node src/tmpMain.js",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/vimana_company/fb-crypto-public.git"
+  },
+  "author": "Serhiy Lymar <serhiy.lymar@gmail.com>",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://bitbucket.org/vimana_company/fb-crypto-public.git"
+  },
+  "homepage": "https://bitbucket.org/vimana_company/fb-crypto-public.git",
+  "dependencies": {
+    "@fidm/x509": "^1.2.0",
+    "asn1js": "^2.0.21",
+    "babel-runtime": "^6.6.1",
+    "byte-array-util": "^1.0.1",
+    "bytey": "^1.0.5",
+    "convert-hex": "^0.1.0",
+    "convert-string": "^0.1.0",
+    "crypto-js": "^3.1.9-1",
+    "elliptic": "^6.4.1",
+    "implement-js": "0.0.26",
+    "industry": "^2.9.0",
+    "industry-chain": "",
+    "industry-exception": "",
+    "industry-functions": "",
+    "industry-include": "",
+    "industry-instance": "",
+    "industry-pattern": "",
+    "industry-standard-io": "",
+    "industry-tasks": "",
+    "key-factory": "^1.2.0",
+    "mocha": "^5.2.0",
+    "node-webcrypto-ossl": "^1.0.38",
+    "node.extend": "^2.0.0",
+    "npm": "^6.4.1",
+    "pbkdf2": "^3.0.1",
+    "pkijs": "^2.1.68",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.3",
+    "winston": "^3.1.0",
+    "btoa": "^1.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "^6.25.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "jasmine": "^2.4.1",
+    "source-map-support": "^0.4.0"
+  }
+}

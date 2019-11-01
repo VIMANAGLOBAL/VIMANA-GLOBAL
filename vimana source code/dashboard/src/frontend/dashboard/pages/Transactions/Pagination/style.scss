@@ -1,0 +1,25 @@
+.wrapper {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    li {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6.6rem;
+        height: 6.6rem;
+        a {
+            color: #666;
+            font-weight: 700;
+            font-size: 1.76rem;
+        }
+    }
+    .active {
+        border: 0.11rem solid #fff;
+        border-radius: 50%;
+        color: #fff;
+    }
+}

@@ -1,0 +1,25 @@
+@import '../common/fonts';
+
+html {
+    font-size: 1vh;
+}
+
+body {
+    font-family: 'Roboto';
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --white-opacity: rgba(255, 255, 255, 0.2);
+    --grey: #666;
+}

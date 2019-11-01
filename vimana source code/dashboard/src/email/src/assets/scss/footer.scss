@@ -1,0 +1,53 @@
+.footer {
+    &-wrapper {
+        height: 650px;
+        background-image: url('%= serverUrl =%/assets/img/footer.png') !important;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        .menu {
+            &-item {
+                vertical-align: middle;
+                img {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+    }
+    p {
+        font-size: 14px !important;
+        font-weight: 300 !important;
+        line-height: 22px !important;
+        color: #58585a !important;
+    }
+    &_link {
+        &.site {
+            a {
+                padding: 0 !important;
+                color: #58585a !important;
+                font-weight: 300 !important;
+                font-size: 14px !important;
+                text-decoration: none !important;
+            }
+        }
+        a {
+            font-size: 18px !important;
+            font-weight: 400 !important;
+            text-decoration: underline !important;
+            color: #58585a !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer {
+        &-wrapper {
+            background-position-x: 53% !important;
+        }
+    }
+    .menu {
+        tr {
+            text-align: center !important;
+        }
+    }
+}

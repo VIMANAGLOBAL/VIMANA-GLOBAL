@@ -1,0 +1,9 @@
+{
+  "key" : "6c42ee9645c4361cb0a27c4738b478e850d6aadf39f1e8dd87852f6e1660f5d0",
+  "salt" : "07597b31",
+  "nonce" : "b5d93cd668f45d2b",
+  "plain_text" : "Red fox jumps over lazy dog",
+  "plain_text_hex" : "52656420666f78206a756d7073206f766572206c617a7920646f67",
+  "aead" : "<<<TEXT TO STAY OPEN>>>",
+  "encrypted" : "00000000b5d93cd668f45d2b000000170000002b3c3c3c5445585420544f2053544159204f50454e3e3e3e7340b156b2b6a20646d2670c2f2e9822f2a43acedcc327464083d9da9f2adb7626dcd6c20ab59e1c5d6139"
+}

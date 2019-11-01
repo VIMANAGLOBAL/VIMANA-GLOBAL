@@ -1,0 +1,85 @@
+.wrapper {
+    h5 {
+        letter-spacing: calc(200 / 1000 * 2.2rem);
+        font-size: 2.2rem;
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: calc(30 / 900 * 100vh);
+        margin-top: calc(50 / 900 * 100vh);
+    }
+    .form {
+        width: calc(844 / 1090 * 100%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+        button {
+            background-color: rgb(255, 255, 255);
+            width: 25rem;
+            height: 5rem;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: calc(200 / 1000 * 2.2rem);
+            text-align: left;
+            padding-left: 2.6rem;
+            cursor: pointer;
+            outline: none;
+            border: 0.15rem solid transparent;
+            transition: 0.3s;
+            &:hover {
+                background-color: transparent;
+                border-color: #fff;
+                color: #fff;
+            }
+        }
+    }
+    p {
+        font-size: 2.2rem;
+        line-height: 3.74rem;
+        color: #fff;
+        margin-bottom: 3rem;
+    }
+    .buttonWrap {
+        display: flex;
+        .button {
+            background-color: rgb(255, 255, 255);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: calc(200 / 1000 * 2.2rem);
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            border: 0.15rem solid transparent;
+            transition: 0.3s;
+            display: flex;
+            margin-right: 25px;
+            padding: 1rem 2.6rem;
+            color: #000;
+            &:hover {
+                background-color: transparent;
+                border-color: #fff;
+                color: #fff;
+            }
+        }
+        .disabledButton {
+            pointer-events: none;
+            background-color: transparent;
+            border: 0.15rem solid var(--grey);
+            color: var(--grey);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: calc(200 / 1000 * 2.2rem);
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+            display: flex;
+            margin-right: 25px;
+            padding: 1rem 2.6rem;
+        }
+    }
+}

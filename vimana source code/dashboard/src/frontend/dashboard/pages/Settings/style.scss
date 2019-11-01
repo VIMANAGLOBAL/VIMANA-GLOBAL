@@ -1,0 +1,66 @@
+.wrapper {
+    h4 {
+        font-weight: 500;
+        font-size: 4.4rem;
+        letter-spacing: calc(200 / 1000 * 4.4rem);
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: calc(82 / 900 * 100vh);
+        line-height: 5.5rem;
+    }
+    h5 {
+        font-weight: 500;
+        font-size: 2.2rem;
+        letter-spacing: calc(200 / 1000 * 2.2rem);
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: calc(50 / 900 * 100vh);
+    }
+    .buttons {
+        margin-top: calc(100 / 900 * 100vh);
+        margin-bottom: 5rem;
+        width: calc(840 / 1080 * 100%);
+        button {
+            background-color: rgb(255, 255, 255);
+            width: 33rem;
+            height: 6.6rem;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: calc(200 / 1000 * 2.2rem);
+            text-align: left;
+            padding-left: 2.6rem;
+            cursor: pointer;
+            outline: none;
+            border: 0.15rem solid transparent;
+            transition: 0.3s;
+            &:hover {
+                background-color: transparent;
+                border-color: #fff;
+                color: #fff;
+            }
+            &.delete_acc {
+                margin-left: 6rem;
+                background-color: #202020;
+                color: #fff;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .FA {
+        overflow: hidden;
+        transition: max-height 0.4s;
+    }
+    .show {
+        max-height: 27.5rem;
+    }
+    .hide {
+        max-height: 0;
+    }
+    .personal_data {
+        margin-bottom: calc(50 / 900 * 100vh);
+    }
+}

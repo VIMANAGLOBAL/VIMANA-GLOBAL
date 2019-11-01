@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    justify-content: center;
+
+    font: inherit;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+    .link {
+        margin: 10px 0;
+        span {
+            user-select: all;
+            color: blue;
+        }
+    }
+
+    .alert {
+        font-size: larger;
+        color: firebrick;
+    }
+
+    .success {
+        font-size: larger;
+        color: #006600;
+    }
+}
+.inner_wrapper {
+    display: flex;
+    width: 50%;
+}

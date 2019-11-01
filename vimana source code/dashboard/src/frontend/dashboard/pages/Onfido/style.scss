@@ -1,0 +1,184 @@
+.wrapper {
+    h4 {
+        font-weight: 500;
+        font-size: 4.4rem;
+        letter-spacing: calc(200 / 1000 * 4.4rem);
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: calc(82 / 900 * 100vh);
+        line-height: 5.5rem;
+    }
+    h5 {
+        font-weight: 500;
+        font-size: 2.2rem;
+        letter-spacing: calc(200 / 1000 * 2.2rem);
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: calc(50 / 900 * 100vh);
+    }
+    .info_message {
+        font-size: large;
+        color: #fff;
+        margin-bottom: 10rem;
+    }
+    .error_message {
+        font-size: large;
+        color: red;
+        margin-bottom: 10rem;
+    }
+    .buttons {
+        margin-top: calc(100 / 900 * 100vh);
+        margin-bottom: 5rem;
+        width: calc(840 / 1080 * 100%);
+        button {
+            background-color: rgb(255, 255, 255);
+            width: 33rem;
+            height: 6.6rem;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: calc(200 / 1000 * 2.2rem);
+            text-align: left;
+            padding-left: 2.6rem;
+            cursor: pointer;
+            outline: none;
+            border: 0.15rem solid transparent;
+            transition: 0.3s;
+            &:hover {
+                background-color: transparent;
+                border-color: #fff;
+                color: #fff;
+            }
+            &.delete_acc {
+                margin-left: 6rem;
+                background-color: #202020;
+                color: #fff;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .FA {
+        overflow: hidden;
+        transition: max-height 0.4s;
+    }
+    .show {
+        max-height: 27.5rem;
+    }
+    .hide {
+        max-height: 0;
+    }
+    .personal_data {
+        margin-bottom: calc(50 / 900 * 100vh);
+    }
+    .dropzone_block {
+        display: block;
+        cursor: pointer;
+        height: 40rem;
+        background-color: rgba(102, 102, 102, 0.3);
+        border: 0.11rem solid #393c41;
+        border-radius: 5px;
+        position: relative;
+        transition: 0.2s;
+        width: 100%;
+        color: var(--grey);
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        text-align: center;
+
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 2;
+        }
+
+        span {
+            font-size: 2.2rem;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .dropzone_preview {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 2rem;
+            justify-content: space-between;
+            height: 100%;
+
+            img {
+                max-height: 25rem;
+                max-width: 25rem;
+                padding: 1rem;
+            }
+        }
+
+        .delete_file_btn {
+            cursor: pointer;
+            align-items: flex-start;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .delete_file_btn::after {
+            background-color: var(--white-opacity);
+            border-radius: 50%;
+            bottom: 0;
+            box-sizing: border-box;
+            color: #fff;
+            content: "\00d7";
+            cursor: pointer;
+            font-size: 12px;
+            height: 17px;
+            width: 17px;
+            line-height: 1;
+            padding: 2px;
+            text-align: center;
+        }
+        .file_info {
+            align-items: flex-end;
+        }
+    }
+    .dropzone_block_active {
+        background-color: rgba(102, 102, 102, 0.7);
+        color: #ffffff;
+    }
+    .dropzone_wrapper {
+        width: calc(840 / 1080 * 100%);
+        font-size: 2.2rem;
+        color: var(--grey);
+        display: flex;
+        align-items: center;
+        margin-bottom: calc(35 / 900 * 100vh);
+    }
+    .disabledButton {
+        pointer-events: none;
+        background-color: transparent;
+        border: 0.15rem solid var(--grey);
+        color: var(--grey);
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: calc(200 / 1000 * 2.2rem);
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+        transition: 0.3s;
+        display: inline-block;
+        margin-right: 25px;
+        padding: 1rem 2.6rem;
+        margin-top: 2rem;
+    }
+}

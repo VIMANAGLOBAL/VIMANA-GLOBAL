@@ -1,0 +1,37 @@
+{
+    "name": "Countries",
+    "value": "All",
+    "chlds": [{
+            "name": "Ukraine",
+            "value": "UA",
+            "chlds": [{
+                    "name": "Chernigivska",
+                    "value": "Chernigivska oblast",
+                    "chlds": [{
+                            "name": "Chernigiv",
+                            "value": "Chernigiv",
+                            "chlds": []
+                        }, {
+                            "name": "Nizhin",
+                            "value": "Nizhin",
+                            "chlds": []
+                        }]
+                }, {
+                    "name": "Kyivska",
+                    "value": "Kyivska oblast",
+                    "chlds": []
+                }, {
+                    "name": "Kharkivska",
+                    "value": "Khakivska oblast",
+                    "chlds": []
+                }]
+        }, {
+            "name": "Uited States",
+            "value": "US",
+            "chlds": []
+        }, {
+            "name": "Germany",
+            "value": "DE",
+            "chlds": []
+        }]
+}

@@ -1,0 +1,25 @@
+.admin_panel__log_list_item__main {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+}
+
+.admin_panel__log_list_item__text {
+  width: 100%;
+}
+
+.admin_panel__log_list_item__paper {
+  min-height: 32px;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 900px;
+}
+
+.admin_panel__log_list_item_plus {
+  width: 30px;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+}

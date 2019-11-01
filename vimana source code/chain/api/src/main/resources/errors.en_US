@@ -1,0 +1,4 @@
+# mapping of error code to parametrized description
+# 
+0: No error, operation is successfull
+999: Example error with 2 paramaters: ${1} and ${2}

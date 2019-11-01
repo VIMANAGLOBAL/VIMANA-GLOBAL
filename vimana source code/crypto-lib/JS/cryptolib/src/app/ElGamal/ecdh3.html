@@ -1,0 +1,218 @@
+<html>
+  <head>
+
+<title>EC ElGamal asymmetric encrytion example</title>
+<script src="jsbn.js" type="text/javascript" language="JavaScript"></script>
+<script src="jsbn2.js" type="text/javascript" language="JavaScript"></script>
+<script src="prng4.js" type="text/javascript" language="JavaScript"></script>
+<script src="rng.js" type="text/javascript" language="JavaScript"></script>
+<script src="ec.js" type="text/javascript" language="JavaScript"></script>
+<script src="sec.js" type="text/javascript" language="JavaScript"></script>
+<script src="ec_crypto.js" type="text/javascript" language="JavaScript"></script>
+<script src="sha256.js" type="text/javascript" language="JavaScript"> ></script>
+<script language="JavaScript">
+
+function do_status(s) {
+  document.ecdhtest.status.value = s;
+}
+
+
+var rng;
+var c; 
+var EcCryptoCtx;
+
+function dump_ec() 
+{
+  document.ecdhtest.q.value = c.getCurve().getQ().toString(16);
+  document.ecdhtest.a.value = c.getCurve().getA().toBigInteger().toString(16);
+  document.ecdhtest.b.value = c.getCurve().getB().toBigInteger().toString(16);
+  document.ecdhtest.gx.value = c.getG().getX().toBigInteger().toString(16);
+  document.ecdhtest.gy.value = c.getG().getY().toBigInteger().toString(16);
+  document.ecdhtest.n.value = c.getN().toString(16);
+}
+
+function do_init()
+{
+  rng = new SecureRandom();
+  c = getSECCurveByName( "secp521r1" );
+  EcCryptoCtx = new ECAsymCrypto ( c, rng );
+  dump_ec();
+}
+
+function gen_priv()
+{
+    EcCryptoCtx.GeneratePrivate();
+    var pri = EcCryptoCtx.GetPrivate();
+    document.ecdhtest.Pri.value = pri.toString(16);
+
+}
+
+function calc_pub()
+{
+    var pk_str = document.ecdhtest.Pri.value;
+    var priKey = new BigInteger(pk_str, 16);
+    EcCryptoCtx.SetPrivate(priKey);
+    
+    EcCryptoCtx.CalculatePublic();
+    var pub = EcCryptoCtx.GetPublic();
+    document.ecdhtest.Pub_x.value = pub.getX().toBigInteger().toString(16);
+    document.ecdhtest.Pub_y.value = pub.getY().toBigInteger().toString(16);
+}
+
+function gen_plain()
+{
+    EcCryptoCtx.GenPlainText();
+    var plain = EcCryptoCtx.GetPlainText();
+    document.ecdhtest.Plain.value = plain.toString(16);
+}
+
+function encrypt()
+{
+    EcCryptoCtx.Encrypt();
+    var m1 = EcCryptoCtx.GetCipherTextM1(); 
+    var m2 = EcCryptoCtx.GetCipherTextM2();
+    document.ecdhtest.M1_x.value = m1.getX().toBigInteger().toString(16) ;
+    document.ecdhtest.M1_y.value = m1.getY().toBigInteger().toString(16) ;
+    document.ecdhtest.M2.value = m2.toString(16) ;
+}
+
+function decrypt()
+{
+    EcCryptoCtx.Decrypt();
+    document.ecdhtest.Restored.value = EcCryptoCtx.GetRestoredText().toString(16); 
+}
+
+function generateSignature()
+{
+    EcCryptoCtx.GenerateSignature(); 
+    document.ecdhtest.signature_r.value = EcCryptoCtx.GetSignatureR().toString(16);
+    document.ecdhtest.signature_s.value = EcCryptoCtx.GetSignatureS().toString(16);
+}
+
+
+
+function generateSignatureJson()
+{
+    var jsonHexStrPrivate = EcCryptoCtx.GetPrivateHex();
+    var hash =  new String(sha256_digest("any message"));  
+    var signature_ = EcCryptoCtx.GenerateSignatureParametric(  hash, jsonHexStrPrivate ) 
+    document.ecdhtest.signature_json.value =   signature_;
+}
+
+function verifySignature()
+{
+
+     var rx = EcCryptoCtx.VerifySignature();
+     if (rx) document.ecdhtest.sig_res.value = "true"; else document.ecdhtest.sig_res.value = "false";
+
+}
+
+function verifySignatureJson()
+{
+    var jsonHexStrPublic = EcCryptoCtx.GetPublicHex(); 
+    var hash =  new String(sha256_digest("any message"));
+    var signature_ =  ecdhtest.signature_json.value; 
+    var rx = EcCryptoCtx.VerifySignatureParametric( hash, signature_, jsonHexStrPublic );
+
+    if (rx) document.ecdhtest.sig_res_json.value = "true"; else document.ecdhtest.sig_res_json.value = "false";
+}
+
+
+function hash()
+{
+    var vx = document.ecdhtest.msg.value; 
+    var hash =  new String(sha256_digest(vx));
+    document.ecdhtest.hashvec.value = hash;
+}
+
+
+</script>
+
+</head>
+
+<body onLoad='do_init();'>
+    <h1>JavaScript ECDH Key Exchange Demo</h1>
+
+<form name="ecdhtest" onSubmit='return false;'>
+
+<style type="text/css">
+.InputClass {
+  font-size: 14px;
+  font-family: 'Courier New';
+}
+</style>
+
+<h2>Elliptic Curve parameters</h2>
+
+Curve Q:<br>
+<input name="q" type="text" class="InputClass" size=65  ><br>
+Curve A:<br>
+<input name="a" type="text" class="InputClass" size=65><br>
+Curve B:<br>
+<input name="b" type="text" class="InputClass" size=65><p>
+G (X,Y):<br>
+<input name="gx" type="text" class="InputClass" size=65><br>
+<input name="gy" type="text" class="InputClass"  size=65><p>
+N:<br>
+<input name="n" type="text" class="InputClass" size=65><p>
+<h2>Public and private keys</h2><p>
+Private key:<br>
+<input name="Pri" type="text" class="InputClass" size=65>
+<input type="button" value="Generate Private" onClick="gen_priv();"><p>
+Public Key (X,Y):<br>
+<input name="Pub_x" type="text" class="InputClass" size=65><br>
+<input name="Pub_y" type="text" class="InputClass"  size=65>
+<input type="button" value="CalculatePublic" onClick="calc_pub();"><p>
+<h2>ElGamal Asymmetric encryption</h2><p>
+Plain message:<br>
+<input name="Plain" type="text" class="InputClass" size=65>
+<input type="button" value="Generate Plain" onClick="gen_plain();"><p>
+Cryptogram:<br>
+<input name="M1_x" type="text" class="InputClass" size=65><br>
+<input name="M1_y" type="text" class="InputClass" size=65><br>
+<input name="M2" type="text" class="InputClass" size=65>
+<input type="button" value="Encrypt Plain" onClick="encrypt();"><p>
+Decrypted message:<br>
+<input name="Restored" type="text" class="InputClass" size=65>
+<input type="button" value="Decrypt" onClick="decrypt();"><p>
+<h2>ECDSA Digital Signature</h2><p>
+signature (r,s):<br>
+<input name="signature_r" type="text" class="InputClass" size=65><br>
+<input name="signature_s" type="text" class="InputClass"  size=65>
+<input type="button" value="Generate" onClick="generateSignature();"><p>
+
+signature in JSON :<br>
+<input name="signature_json" type="text" class="InputClass"  size=65>
+<input type="button" value="Generate" onClick="generateSignatureJson();"><p>
+
+
+Verification result:<br>
+<input name="sig_res" type="text" class="InputClass" size=65>
+<input type="button" value="Verify" onClick="verifySignature();"><p>
+
+
+Verification in JSON result :<br>
+<input name="sig_res_json" type="text" class="InputClass" size=65>
+<input type="button" value="Verify" onClick="verifySignatureJson();"><p>
+
+
+
+<h2>Hashing with sha-256 example</h2><p>
+
+
+
+Message for hashing:<br>
+<input name="msg" type="text" class="InputClass" size=65>
+<input type="button" value="hash it!" onClick="hash();"><p>
+Message digest:<br>
+<input name="hashvec" type="text" class="InputClass" size=65>
+
+
+
+
+<p>
+
+</form>
+
+  </body>
+</html>

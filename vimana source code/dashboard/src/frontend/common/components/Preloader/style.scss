@@ -1,0 +1,38 @@
+.wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+}
+
+.loader {
+    display: inline-block;
+    width: 8.8rem;
+    height: 8.8rem;
+    &:after {
+        content: ' ';
+        display: block;
+        width: 7rem;
+        height: 7rem;
+        margin: 0.11rem;
+        border-radius: 50%;
+        border: 0.7rem solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

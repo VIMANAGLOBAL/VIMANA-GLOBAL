@@ -1,0 +1,53 @@
+@import '../common/fonts';
+
+html {
+    font-size: 1vh;
+}
+
+body {
+    font-family: 'Roboto';
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+}
+
+:global {
+    .error {
+        color: #ff0000 !important;
+        input {
+            color: #ff0000 !important;
+            -webkit-text-fill-color: #ff0000 !important;
+            &::placeholder {
+                color: #ff0000 !important;
+            }
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:active {
+                -webkit-text-fill-color: #ff0000;
+                background-color: transparent;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+        }
+        &:after {
+            border-color: #ff0000 !important;
+        }
+    }
+    .disabled {
+        cursor: not-allowed !important;
+        opacity: 0.3;
+    }
+}
+
+:root {
+    --white-opacity: rgba(255, 255, 255, 0.2);
+    --grey: #cccccc;
+}

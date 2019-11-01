@@ -1,0 +1,33 @@
+.admin_panel__log_panel {
+  display: flex;
+  flex-direction: row;
+}
+
+.admin_panel__log_panel__list_item {
+  font: inherit;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.admin_panel__log_panel__selected {
+  color: #ac2925 !important;
+}
+
+.admin_panel__log_panel__file_list {
+  width: 20%;
+}
+
+.admin_panel__log_panel__textbox {
+  height: 100%;
+  font: inherit;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.admin_panel__log_panel__textbox_nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.admin_panel__log_panel__filters {
+  width: 20%;
+  padding-left: 50px;
+}

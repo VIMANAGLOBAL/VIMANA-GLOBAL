@@ -1,0 +1,82 @@
+version: '2'
+
+services:
+  redis:
+    image: redis
+    networks:
+      - vimana-dashboard
+    volumes:
+      - 'redis-data:/data'
+    ports:
+      - '${REDIS_PORT}:6379'
+
+  db:
+    image: postgres:9.6
+    command: '-p ${DATABASE_PORT}'
+    volumes:
+      - 'database:/var/lib/postgresql/data'
+    environment:
+      - POSTGRES_DB=vimana-dashboard
+      - POSTGRES_USER=vimana
+      - POSTGRES_PASSWORD=vimana
+    ports:
+      - '${DATABASE_PORT}:5432'
+    networks:
+      - vimana-dashboard
+
+  modules:
+    image: node:8.9.4
+    working_dir: '/app'
+    entrypoint: 'npm'
+    volumes:
+      - './package.json:/app/package.json'
+      - 'node_modules:/app/node_modules'
+    networks:
+      - vimana-dashboard
+
+  web:
+    image: node:8.9.4
+    working_dir: '/app'
+    command: 'npm run start:app'
+    ports:
+      - '${PORT}:3000'
+      - '${LIVERELOAD_PORT}:34512'
+      - '${WS_PORT}:3002'
+    networks:
+      - vimana-dashboard
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - './logs/:/app/logs'
+      - './docs/:/app/docs'
+      - './src/:/app/src'
+      - './package.json:/app/package.json'
+      - './tsconfig.json:/app/tsconfig.json'
+      - './webpack.config.js:/app/webpack.config.js'
+      - 'node_modules:/app/node_modules'
+    environment:
+      - LIVERELOAD_PORT=${LIVERELOAD_PORT}
+      - SERVER_URL=${SERVER_URL}
+      - ONFIDO_TOKEN=test_BQfQtTYzJqtWiOhNZgcgAbnbM3Y7U1KX
+      - DATABASE_URL=postgres://vimana:vimana@db:${DATABASE_PORT}/vimana-dashboard
+      - REDIS_URL=redis://redis:${REDIS_PORT}
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT}
+      - WS_PORT=${WS_PORT}
+      - HOST=${HOST}
+      - INVESTMENT_MAIL=${INVESTMENT_MAIL}
+      - MAILER_USER=${MAILER_USER}
+      - MAILER_PASS=${MAILER_PASS}
+      - MAILER_FROM=${MAILER_FROM}
+      - RECAPTCHA_KEY=${RECAPTCHA_KEY}
+      - WS_SERVER_URL=${WS_SERVER_URL}
+
+networks:
+  vimana-dashboard:
+    driver: bridge
+
+volumes:
+  node_modules:
+  database:
+  redis-data:

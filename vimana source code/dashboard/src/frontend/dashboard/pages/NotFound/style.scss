@@ -1,0 +1,16 @@
+.wrapper {
+    h4 {
+        font-weight: 500;
+        font-size: 4.4rem;
+        letter-spacing: calc(200 / 1000 * 4.4rem);
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: calc(82 / 900 * 100vh);
+        line-height: 5.5rem;
+    }
+    .info_message {
+        font-size: large;
+        color: #fff;
+        margin-bottom: 10rem;
+    }
+}

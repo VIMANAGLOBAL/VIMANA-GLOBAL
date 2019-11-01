@@ -1,0 +1,5 @@
+export const CHANGE_USERNAME = "CHANGE_USERNAME";
+export const CHANGE_PASSWORD = "CHANGE_PASSWORD";
+export const LOGIN_SEND = "LOGIN_SEND";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAILED = "LOGIN_FAILED";

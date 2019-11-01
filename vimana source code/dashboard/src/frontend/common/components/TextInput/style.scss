@@ -1,0 +1,39 @@
+.wrapper {
+    width: calc(840 / 1080 * 100%);
+    font-size: 2.2rem;
+    color: var(--grey);
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(35 / 900 * 100vh);
+    label {
+        display: block;
+        width: 35.71%;
+        img {
+            width: 14rem;
+            height: 14rem;
+        }
+    }
+    input {
+        text-align: center;
+        font-size: 2rem;
+        outline: none;
+        width: 64.29%;
+        border: none;
+        background-color: transparent;
+        border-bottom: 0.11rem solid #393c41;
+        color: var(--input-color);
+        padding-bottom: 1rem;
+        &::placeholder {
+            font-size: 2rem;
+            color: var(--input-color);
+            opacity: 1;
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            background-color: transparent;
+            transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.wrapper {
+    width: 25rem;
+    height: 5rem;
+    line-height: 5rem;
+    border: 0.11rem solid #393c41;
+
+    :global .Select {
+        font-size: 2rem;
+        position: relative;
+        cursor: pointer;
+        color: var(--input-color);
+
+        .Select-control {
+            height: 5rem;
+            position: relative;
+        }
+        .is-selected {
+            &:before {
+                content: '✔';
+                display: inline-block;
+                font-size: 1.3rem;
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .Select-value,
+        .Select-placeholder {
+            padding-left: 2.6rem;
+            color: var(--input-color);
+        }
+        .Select-arrow-zone {
+            font-size: 1rem;
+            line-height: 1rem;
+            position: absolute;
+            right: 2.6rem;
+            top: 50%;
+            transform: translateY(-50%) rotateX(180deg);
+            transition: transform 0.3s;
+            will-change: transform;
+        }
+        .Select-input {
+            display: none !important;
+        }
+        .Select-menu-outer {
+            z-index: 5;
+            position: absolute;
+            top: 0;
+            background-color: #f0f0f0;
+            left: 0;
+            right: 0;
+        }
+    }
+    .option {
+        padding: 0 2.8rem;
+        line-height: 3rem;
+        position: relative;
+        color: #000;
+
+        &:hover {
+            color: #fff;
+            background-color: #4598fe;
+        }
+    }
+}

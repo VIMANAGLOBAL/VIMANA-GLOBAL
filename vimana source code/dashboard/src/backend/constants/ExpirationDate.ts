@@ -1,0 +1,5 @@
+export enum ExpirationDate {
+    VERIFICATION_LETTER = 3600000,
+    LETTER_RESEND = 900000,
+    VIP_CODE = 3600000
+}

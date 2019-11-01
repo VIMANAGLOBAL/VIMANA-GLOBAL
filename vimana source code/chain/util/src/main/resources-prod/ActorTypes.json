@@ -1,0 +1,70 @@
+{
+    "name": "ActorTypes",
+    "value": "All",
+    "descr": "Vimana Actor types and sub-types",
+    "chlds": [{
+            "name": "NoType",
+            "value": "0",
+            "descr": "Not type is set, assuming to not-Vimana cartificate",
+            "chlds": []
+        }, {
+            "name": "Node",
+            "value": "1",
+            "descr": "Blockchain node",
+            "chlds": [{
+                    "name": "Regular",
+                    "value": "0",
+                    "descr": "Regular blockchain node wihout any special priveleges",
+                    "chlds": []
+                }, {
+                    "name": "VTOL",
+                    "value": "1",
+                    "descr": "Flying node, VTOL aero taxi",
+                    "chlds": []
+                }, {
+                    "name": "Control",
+                    "value": "2",
+                    "descr": "Fly control node node, regional",
+                    "chlds": []
+                }, {
+                    "name": "GlobalControl",
+                    "value": "4",
+                    "descr": "Global control node",
+                    "chlds": []
+                }
+            ]
+        }, {
+            "name": "Personal",
+            "value": "2",
+            "descr": "Personal certificate",
+            "chlds": [{
+                    "name": "Regular Person",
+                    "value": "0",
+                    "descr": "Regular person wihout any special priveleges",
+                    "chlds": []
+                }, {
+                    "name": "VTOL Service",
+                    "value": "1",
+                    "descr": "Flying node service, VTOL aero taxi service personal",
+                    "chlds": []
+                }, {
+                    "name": "Control Service",
+                    "value": "2",
+                    "descr": "Fly control node node service, regional",
+                    "chlds": []
+                }, {
+                    "name": "GlobalControl Service",
+                    "value": "4",
+                    "descr": "Global control service",
+                    "chlds": []
+                }, {
+                    "name": "Software Service",
+                    "value": "0x010001",
+                    "descr": "Global software service (developers, release engineers)",
+                    "chlds": []
+                }
+                
+            ]
+        }
+    ]
+}

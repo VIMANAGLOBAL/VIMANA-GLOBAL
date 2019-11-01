@@ -1,0 +1,28 @@
+.header {
+    &-row {
+        background-image: url('%= serverUrl =%/assets/img/header.png');
+        height: 220px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &-link {
+        padding-top: 150px !important;
+        a {
+            padding-right: 40px !important;
+            color: #2718d3 !important;
+            font-size: 18px !important;
+            font-weight: 400 !important;
+            text-decoration: underline !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        &-link {
+            a {
+                padding-right: 20px !important;
+            }
+        }
+    }
+}

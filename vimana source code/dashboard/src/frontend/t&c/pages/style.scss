@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    height: 100%;
+
+    main {
+        background-image: url('../../common/assets/bcg.jpg');
+        background-size: cover;
+        width: calc((1600 - 420) / 1600 * 100%);
+        padding-left: calc(44 / 1180 * 100%);
+        padding-right: calc(30 / 1180 * 100%);
+    }
+}

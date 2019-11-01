@@ -1,0 +1,37 @@
+.wrapper {
+    width: calc(840 / 1080 * 100%);
+    margin-top: calc(64 / 900 * 100vh);
+    font-size: 2.2rem;
+    color: var(--grey);
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(35 / 900 * 100vh);
+    p {
+        display: block;
+        width: 35.71%;
+        color: #cccccc;
+    }
+    .input_wrapper {
+        outline: none;
+        width: 64.29%;
+        border: none;
+        display: flex;
+        label {
+            input {
+                display: none;
+            }
+            input:checked + span {
+                background-color: #202020;
+                color: #fff;
+            }
+            span {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 17.6rem;
+                height: 6.6rem;
+            }
+        }
+    }
+}

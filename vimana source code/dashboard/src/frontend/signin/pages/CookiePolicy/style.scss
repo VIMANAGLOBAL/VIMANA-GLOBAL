@@ -1,0 +1,38 @@
+.wrapper {
+    width: 80%;
+    font-size: 2rem;
+    padding: 4rem 0;
+    h3 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    span {
+        text-align: right;
+        width: 100%;
+        display: block;
+        margin: 2rem 0;
+    }
+    p {
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 2rem;
+        thead {
+            th:first-child {
+                width: 30%;
+            }
+        }
+        th,
+        td {
+            padding: 2rem;
+        }
+    }
+    tr {
+        border: 1px solid black;
+    }
+}

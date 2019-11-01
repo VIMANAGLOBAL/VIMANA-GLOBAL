@@ -1,0 +1,24 @@
+.wrapper {
+    .inner {
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: calc(30 / 900 * 100vh);
+        span {
+            display: block;
+            font-size: 4.4rem;
+            letter-spacing: calc(200 / 1000 * 4rem);
+            &:last-child {
+                margin-top: calc(10 / 900 * 100vh);
+                letter-spacing: calc(200 / 1000 * 2.2rem);
+                font-size: 2.2rem;
+            }
+        }
+    }
+    p {
+        font-size: 2.2rem;
+        line-height: 3.74rem;
+        color: #fff;
+        margin-bottom: 3rem;
+    }
+}

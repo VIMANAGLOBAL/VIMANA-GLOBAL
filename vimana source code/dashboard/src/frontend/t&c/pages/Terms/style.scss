@@ -1,0 +1,49 @@
+.wrapper {
+    width: calc(660 / 1080 * 100%);
+
+    &_inner {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.2rem;
+        margin-bottom: 5rem;
+
+        .step_counter {
+            font-weight: 500;
+            color: #fff;
+            letter-spacing: calc(200 / 1000 * 2.2rem);
+        }
+        a {
+            color: #fff;
+            letter-spacing: calc(100 / 1000 * 2.2rem);
+            line-height: 2.63rem;
+            span {
+                font-size: 1.6rem;
+                color: var(--white-opacity);
+                letter-spacing: 0;
+            }
+        }
+    }
+    :global .text {
+        display: block;
+        font-size: 2.2rem;
+        line-height: 3.6rem;
+        color: var(--white-opacity);
+        margin-bottom: 6.4rem;
+    }
+    button {
+        display: block;
+        color: #fff;
+        border: none;
+        background-color: #32cd32;
+        width: 33rem;
+        height: 6.6rem;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: calc(200 / 1000 * 2.2rem);
+        text-align: left;
+        padding-left: 2.6rem;
+        cursor: pointer;
+        outline: none;
+    }
+}

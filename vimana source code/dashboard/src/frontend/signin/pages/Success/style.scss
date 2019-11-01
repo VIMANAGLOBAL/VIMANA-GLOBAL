@@ -1,0 +1,16 @@
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000;
+    font-size: 5rem;
+    text-align: center;
+    color: #fff;
+    a {
+        margin-top: 3rem;
+        color: #fff;
+    }
+}

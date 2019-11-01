@@ -1,0 +1,21 @@
+{
+    "name": "Business Codes",
+    "value": "All",
+    "descr": null,
+    "chlds": [{
+            "name": "None",
+            "value": "0",
+            "descr": "No Business Code defined",
+            "chlds": []
+        }, {
+            "name": "vimana",
+            "value": "0x1",
+            "descr": "vimana LLC, developer of Vimana",
+            "chlds": []
+        }, {
+            "name": "VimanaGlobal",
+            "value": "0x2",
+            "descr": "Vimana Global corporation, origin of Vimana",
+            "chlds": []
+        }]
+}

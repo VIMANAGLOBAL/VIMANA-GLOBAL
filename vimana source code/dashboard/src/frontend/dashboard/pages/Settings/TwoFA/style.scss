@@ -1,0 +1,9 @@
+.qr {
+    width: calc(840 / 1080 * 100%);
+    font-size: 2.2rem;
+    color: var(--grey);
+    margin-bottom: calc(35 / 900 * 100vh);
+    a {
+        color: #fff;
+    }
+}

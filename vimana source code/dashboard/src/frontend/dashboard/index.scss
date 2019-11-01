@@ -1,0 +1,54 @@
+@import '../common/fonts.scss';
+
+html {
+    font-size: 1vh;
+}
+
+body {
+    font-family: 'Roboto';
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+    &-thumb {
+        background: #666;
+        border-radius: 1.4rem;
+        &:hover {
+            background: #555;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+:global {
+    .error {
+        input {
+            color: #ff0000 !important;
+            border-bottom-color: #ff0000 !important;
+            &::placeholder {
+                color: #ff0000 !important;
+            }
+        }
+        .registerSelect {
+            border-bottom-color: #ff0000 !important;
+        }
+    }
+}
+
+:root {
+    --white-opacity: rgba(255, 255, 255, 0.2);
+    --grey: #666;
+    --dark-grey: #434343;
+    --theme: #32cd32;
+    --input-color: #ccc;
+}

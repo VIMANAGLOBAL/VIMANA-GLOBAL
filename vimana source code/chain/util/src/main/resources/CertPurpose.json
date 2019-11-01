@@ -1,0 +1,26 @@
+{
+    "name": "Certificate Purpose Codes",
+    "value": "All",
+    "descr": null,
+    "chlds": [{
+            "name": "Node",
+            "value": "HOST",
+            "descr": "Certificate for regular node",
+            "chlds": []
+        }, {
+            "name": "Personal",
+            "value": "PERSON",
+            "descr": "Personal certificate, Human account",
+            "chlds": []
+        }, {
+            "name": "Actor",
+            "value": "PERSON",
+            "descr": "Personal certificate, Robot account",
+            "chlds": []
+        }, {
+            "name": "Software Signing",
+            "value": "SOFTSIGN",
+            "descr": "Vimana Global corporation, Software sign cert",
+            "chlds": []
+        }]
+}

@@ -1,0 +1,7 @@
+export enum LetterType {
+    VERIFICATION = "VERIFICATION",
+    RECOVER = "RECOVER",
+    INVESTMENT = "INVESTMENT",
+    VIP = "VIP",
+    VIP_WELCOME = "VIP_WELCOME"
+}

@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    min-height: 100%;
+
+    main {
+        background-image: url('../../common/assets/bcg.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        width: calc((1600 - 420) / 1600 * 100%);
+    }
+    .scroll {
+        height: 100vh;
+        overflow-y: scroll;
+        padding-left: calc(44 / 1180 * 100%);
+        padding-right: calc(30 / 1180 * 100%);
+    }
+}

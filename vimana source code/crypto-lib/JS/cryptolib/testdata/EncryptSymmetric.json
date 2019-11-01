@@ -1,0 +1,8 @@
+{
+  "key" : "bd70e96d40025d5251c58222f5b4c1b62f6237b1242f24c56b7c9d564fc85b50",
+  "salt" : "8e6a612b",
+  "nonce" : "a54d71000f733526",
+  "plainTextBytes" : "52656420666f78206a756d7073206f766572206c617a7920646f67",
+  "plainText" : "Red fox jumps over lazy dog",
+  "encrypted" : "a54d71000f733526cc6303ad235afe3598829d8b9add325ed1b65623da7a6cad24835e95965100949138efe0d9285b33ff374e"
+}

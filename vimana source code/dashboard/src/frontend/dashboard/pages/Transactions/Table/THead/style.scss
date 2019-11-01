@@ -1,0 +1,15 @@
+thead {
+    color: #fff;
+    font-size: 1.32rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    vertical-align: top;
+    letter-spacing: calc(200 / 1000 * 1.32rem);
+    line-height: 2.2rem;
+    &:after {
+        content: '-';
+        display: block;
+        color: transparent;
+        line-height: calc(30 / 900 * 100vh);
+    }
+}

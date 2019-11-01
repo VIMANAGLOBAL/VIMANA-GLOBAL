@@ -1,0 +1,32 @@
+.wrapper {
+    width: 100%;
+    border-collapse: collapse;
+    height: 100px;
+    table-layout: fixed;
+    :global {
+        .column1 {
+            width: calc(70 / 1080 * 100%);
+        }
+        .column2 {
+            width: calc(160 / 1080 * 100%);
+        }
+        .column3 {
+            width: calc(115 / 1080 * 100%);
+        }
+        .column4 {
+            width: calc(115 / 1080 * 100%);
+        }
+        .column5 {
+            width: calc(100 / 1080 * 100%);
+        }
+        .column6 {
+            width: calc(160 / 1080 * 100%);
+        }
+        .column7 {
+            width: calc(180 / 1080 * 100%);
+        }
+        .column8 {
+            width: calc(180 / 1080 * 100%);
+        }
+    }
+}

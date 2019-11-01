@@ -1,0 +1,55 @@
+{
+    "name": "Region Codes",
+    "value": "All",
+    "descr": "Regions may incliude several countries",
+    "chlds": [{
+            "name": "NoCode",
+            "value": "0",
+            "descr": "Not region code is set, assuming to not-Vimana cartificate",
+            "chlds": []
+        }, {
+            "name": "Eastern Europe",
+            "value": "1",
+            "descr": "Eastern Europe countries",
+            "chlds": [{
+                    "name": "Ukraine",
+                    "value": "UA",
+                    "descr": "Ukraine and Crimea",
+                    "chlds": []
+                }, {
+                    "name": "Poland",
+                    "value": "PL",
+                    "descr": "Poland",
+                    "chlds": []
+                }, {
+                    "name": "Bulgaria",
+                    "value": "BU",
+                    "descr": "Bulgaria",
+                    "chlds": []
+                }, {
+                    "name": "Hungary",
+                    "value": "HU",
+                    "descr": "Hungary",
+                    "chlds": []
+                }
+            ]
+        }, {
+            "name": "North America",
+            "value": "2",
+            "descr": "US and Canada",
+            "chlds": [{
+                    "name": "USA",
+                    "value": "US",
+                    "descr": "United States of America",
+                    "chlds": []
+                }, {
+                    "name": "Canada",
+                    "value": "CA",
+                    "descr": "Canada",
+                    "chlds": []
+                }
+                
+            ]
+        }
+    ]
+}
