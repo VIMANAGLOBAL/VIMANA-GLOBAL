@@ -28,7 +28,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         
         <jcommander.version>1.72</jcommander.version>
-        <bouncycastle.version>1.61</bouncycastle.version>
+        <bouncycastle.version>1.67</bouncycastle.version>
         <junit-5-bom.version>5.3.1</junit-5-bom.version>
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
